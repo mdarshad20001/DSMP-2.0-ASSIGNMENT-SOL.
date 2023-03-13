@@ -1,0 +1,570 @@
+{
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/mdarshad20001/DSMP-2.0-ASSIGNMENT-SOL./blob/main/assignment%204%20solution\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "Assignment 4 Solutions\n",
+        "\n",
+        "1.What exactly is [ ]?\n",
+        "\n",
+        "Ans: The empty list represented by [] is a list that contains no items. This is similar to '' which represents an empty string\n",
+        "\n",
+        "2.In a list of values stored in a variable called spam, how would you assign the value 'hello' as the third value? (Assume [2, 4, 6, 8, 10] are in spam.)\n",
+        "\n",
+        "Ans: spam[2]='hello' (Note: Lists follows zero based indexing)"
+      ],
+      "metadata": {
+        "id": "GzE6z4a8mEzX"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [],
+      "metadata": {
+        "id": "3bPeyHeumBBw"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# Example\n",
+        "spam=[2,4,6,8,10]\n",
+        "print(spam)\n",
+        "spam[2]='hello' #List uses zero based indexing\n",
+        "print(spam)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "aDR_zuCZl_yV",
+        "outputId": "e5d5c50f-0d31-4848-8610-cfa19182f31c"
+      },
+      "execution_count": 1,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "[2, 4, 6, 8, 10]\n",
+            "[2, 4, 'hello', 8, 10]\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [],
+      "metadata": {
+        "id": "ka-BS6_Cl_0a"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "Let's pretend the spam includes the list ['a','b','c',d'] for the next three queries.\n",
+        "3. What is the value of spam[int(int('3'*2)//11)] ?\n",
+        "\n",
+        "Ans: 'd' (Note that '3' * 2 is the string '33', which is passed to int() before being divided by 11. This eventually evaluates to 3, spam[3] is equal to d.)"
+      ],
+      "metadata": {
+        "id": "AYU_Yu_VmmLo"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [],
+      "metadata": {
+        "id": "ZZxfUie7mgC9"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "spam=['a','b','c','d']\n",
+        "print(\"spam[int(int('3'*2)//11)] ->\",spam[int(int('3'*2)//11)])"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "GGyXHtC0l_35",
+        "outputId": "a36552d6-3b0b-40ae-ba0c-dc99844f5d5f"
+      },
+      "execution_count": 2,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "spam[int(int('3'*2)//11)] -> d\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [],
+      "metadata": {
+        "id": "rE3TKUyfl_68"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "4. What is the value of spam[-1]?\n",
+        "\n",
+        "Ans: 'd' (Lists support Negative indexing, Hence spam[-1] returs 'd')"
+      ],
+      "metadata": {
+        "id": "asHT9tJInFrx"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "spam=['a','b','c','d']\n",
+        "print('spam[-1] -> ',spam[-1])"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "UZqwu51kl_-q",
+        "outputId": "de726a1a-f0d7-4574-9777-a1e385d8868d"
+      },
+      "execution_count": 3,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "spam[-1] ->  d\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [],
+      "metadata": {
+        "id": "wKwC9emal__9"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "5. What is the value of spam[:2]?\n",
+        "\n",
+        "Ans: spam[:2] returns all elements in the list spam from 0 to 2 excluding 2"
+      ],
+      "metadata": {
+        "id": "_8eSnHmcnWt1"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "print(spam)\n",
+        "print(spam[:2])"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "8YS6Ct1wmABl",
+        "outputId": "1ce8ce9a-5a95-4556-fba1-da5d2c2a9dd3"
+      },
+      "execution_count": 4,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "['a', 'b', 'c', 'd']\n",
+            "['a', 'b']\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [],
+      "metadata": {
+        "id": "bwmQNpkdmADb"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "Let's pretend bacon has the list [3.14,'cat',11,'cat',True] for the next three question\n",
+        "\n",
+        "6. What is the value of bacon.index('cat')?\n",
+        "\n",
+        "Ans: The value of bacon.index('cat') is 1 (Note: index method returns the index of first occuerence of 'cat')"
+      ],
+      "metadata": {
+        "id": "BCXYZR4UpFXA"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "bacon=[3.14,'cat',11,'cat',True]\n",
+        "print(\"bacon.index('cat') ->\",bacon.index('cat'))"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "2qujM3G9mAGS",
+        "outputId": "e06a468f-74b6-4acd-8bb2-a63a136ae974"
+      },
+      "execution_count": 5,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "bacon.index('cat') -> 1\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [],
+      "metadata": {
+        "id": "5ks8VoL1mAIN"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "7. How does bacon.append(99) change the look of the list value in bacon?\n",
+        "\n",
+        "Ans: The append method adds new elements to the end of the list"
+      ],
+      "metadata": {
+        "id": "LIS6P_fPpMZc"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# Example\n",
+        "print(bacon)\n",
+        "bacon.append(99) # appends 99 to the end of the list\n",
+        "print(bacon)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "CUZ7AyPcmALB",
+        "outputId": "197840b7-2442-4b73-9fc1-f14164205825"
+      },
+      "execution_count": 6,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "[3.14, 'cat', 11, 'cat', True]\n",
+            "[3.14, 'cat', 11, 'cat', True, 99]\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [],
+      "metadata": {
+        "id": "vDSmU3dvpU_E"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "8. How does bacon.remove('cat') change the look of the list in bacon?\n",
+        "\n",
+        "Ans: The remove method removes the first occurence of the element in the list\n",
+        "\n"
+      ],
+      "metadata": {
+        "id": "AfgjBAOapbRO"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "print(bacon)\n",
+        "bacon.remove('cat')\n",
+        "print(bacon)"
+      ],
+      "metadata": {
+        "id": "eGiZTDyMpetd",
+        "outputId": "656a07e1-8dc9-4d92-dfbb-7a35f06db40f",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        }
+      },
+      "execution_count": 7,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "[3.14, 'cat', 11, 'cat', True, 99]\n",
+            "[3.14, 11, 'cat', True, 99]\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [],
+      "metadata": {
+        "id": "_-GT0hQtpfW_"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "9.what are the list concatenation and list replication operations?\n",
+        "\n",
+        "Ans: The operator for list concatenation is +, while the operator for replication is *. (This is the same as for strings.)\n",
+        "\n"
+      ],
+      "metadata": {
+        "id": "YJjCtCgBp0o5"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# Example\n",
+        "list_1 = ['ML','DL','AI','CV','NLP']\n",
+        "list_2 = ['RNN','CNN','SVN']\n",
+        "print(list_1 + list_2) # List Concatenation\n",
+        "print(list_2*2) # List Replication"
+      ],
+      "metadata": {
+        "id": "aRnTTo1jp8Ah",
+        "outputId": "cb8c795b-f838-4bee-c09a-886b2b3069f0",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        }
+      },
+      "execution_count": 8,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "['ML', 'DL', 'AI', 'CV', 'NLP', 'RNN', 'CNN', 'SVN']\n",
+            "['RNN', 'CNN', 'SVN', 'RNN', 'CNN', 'SVN']\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [],
+      "metadata": {
+        "id": "gbEx_OK-p8kr"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "10.what is the difference between the list method append() and insert()?\n",
+        "\n",
+        "Ans: While append() will add values only to the end of a list, insert() can add them anywhere in the list.\n",
+        "\n"
+      ],
+      "metadata": {
+        "id": "FdNFdnpFqI21"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#Examples\n",
+        "list = [1,2,3,4,5]\n",
+        "list.append(6)\n",
+        "print(list)\n",
+        "list.insert(2,'Demo')\n",
+        "print(list)"
+      ],
+      "metadata": {
+        "id": "W_MJyBrsqLG2",
+        "outputId": "635945ad-6493-46b9-f1a0-59fb1a432cb6",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        }
+      },
+      "execution_count": 9,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "[1, 2, 3, 4, 5, 6]\n",
+            "[1, 2, 'Demo', 3, 4, 5, 6]\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "11. What are the two methods for removing items from a list?\n",
+        "\n",
+        "Ans: The del statement and the remove() method are two ways to remove values from a list\n",
+        "\n",
+        "\n",
+        "\n",
+        "12. Describe how list values and string values are identical.\n",
+        "\n",
+        "Ans: Both lists and strings can be passed to len() function, have indexes and slices, be used in for loops, be concatenated or replicated, and be used with the in and not in operators.\n",
+        "\n",
+        "\n",
+        "\n",
+        "13. What's the difference between tuples and lists?\n",
+        "\n",
+        "Ans: Lists are Mutable, Indexable and Slicable. they can have values added, removed, or changed. Tuples are Immutable but Indexable and Slicable. the tuple values cannot be changed at all. Also, tuples are represented using parentheses, (), while lists use the square brackets, [].\n",
+        "\n",
+        "\n",
+        "\n",
+        "14. How do you type a tuple value that only contains the integer 42?\n",
+        "\n",
+        "Ans:(42,) (The trailing comma is mandatory. otherwise its considered as a int by python Interpreter)\n"
+      ],
+      "metadata": {
+        "id": "9Ty3HNKDqapJ"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [],
+      "metadata": {
+        "id": "FKu5QUJfqWz3"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [],
+      "metadata": {
+        "id": "oVI-xhd_qvnU"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "tup1=(42)\n",
+        "tup2=(42,)\n",
+        "print(type(tup1))\n",
+        "print(type(tup2))"
+      ],
+      "metadata": {
+        "id": "S8Btt9XGqsc0",
+        "outputId": "60d6db33-af3a-44f7-ad2e-c893b0d6360d",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        }
+      },
+      "execution_count": 12,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "<class 'int'>\n",
+            "<class 'tuple'>\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [],
+      "metadata": {
+        "id": "DbHZmiaMqzPk"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "15. How do you get a list value's tuple form? How do you get a tuple value's list form?\n",
+        "\n",
+        "Ans: The tuple() and list() functions, respectively are used to convert a list to tuple and vice versa\n",
+        "\n",
+        "\n",
+        "\n",
+        "16. Variables that \"contain\" list values are not necessarily lists themselves. Instead, what do they contain?\n",
+        "\n",
+        "Ans: They contain references to list values.\n",
+        "\n",
+        "\n",
+        "\n",
+        "17. How do you distinguish between copy.copy() and copy.deepcopy()?\n",
+        "\n",
+        "Ans: The copy.copy() function will do a shallow copy of a list, while the copy.deepcopy() function will do a deep copy of a list. That is, only copy.deepcopy() will duplicate any lists inside the list."
+      ],
+      "metadata": {
+        "id": "HzHQI-kCq9Uq"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [],
+      "metadata": {
+        "id": "pNLdUSTxrAvF"
+      },
+      "execution_count": null,
+      "outputs": []
+    }
+  ],
+  "metadata": {
+    "colab": {
+      "name": "Welcome To Colaboratory",
+      "provenance": [],
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "display_name": "Python 3",
+      "name": "python3"
+    }
+  },
+  "nbformat": 4,
+  "nbformat_minor": 0
+}
